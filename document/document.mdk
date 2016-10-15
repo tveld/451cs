@@ -1,0 +1,34 @@
+Title         : CS451 Single Cycle Performance Homework
+Author        : Troy Veldhuizen
+Logo          : True
+
+[TITLE]
+
+**1.) Consider a CPU. Suppose we were given the option of decreasing the cycle time by 20% in exchange for a 20% increase in the number of instructions. Is this a good trade-off?**
+
+
+~ Math
+\begin{aligned} 
+ t &= n*p       &   t' &= n' * p'\\
+ t &= 925n      &   t' &= (1.2)n' * (0.8)925\\ 
+ &              &   t' &= (1.2)n' * 720\\
+ &              &   t' &= 864n'\\
+\end{aligned}
+~
+We can set the two equations equal to each other to see how many instructions each CPU can run in the same amount of time.
+~ Math
+\begin{aligned} 
+ 925n &= 864n'\\
+ 1.07n &= n'\\
+ \end{aligned}
+~
+We can see that the new cpu will run 7% more instructions in the same time as the old CPU, assuming the old CPU's clock period was 925ps.  This is a good performance increase.  This is a tradeoff that should be taken every time.
+
+**3.) Consider the single-cycle CPU with a 925ps clock period. Suppose that doubling the size of the register file from 32 to 64 registers would reduce the number of lw and sw instructions, but would increase the delay of the register file from 150 to 175. What percent of these instructions must be removed? Assume that loads and stores account for 35% of the original workload.**
+
+~ Math
+\begin{aligned}
+  t &= n * p      &   t' &= n' * p'\\
+  t &= n * 925    &   t' &= (n - (x * 0.35 *n))950\\
+\end{aligned}
+~
