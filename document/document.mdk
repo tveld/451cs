@@ -1,0 +1,88 @@
+Title         : Pipeline Implementation/Operation
+Author        : Troy Veldhuizen
+
+[TITLE]
+
+6.    
+  a. For each RAW dependency listed above, give a sequence of at least 3 assembly statements that exhibits that dependency.
+        - EX to 1st only
+          ```
+          add $r3, $r4, $r5
+          add $r6, $r2, $r3
+          add $r7, $r8, $r9
+          ```
+        - MEM to 1st only
+          ```
+            lw $a0, 8($sp)
+            add $r3, $r4, $a0
+            add $r7, $r8, $r9
+          ```
+        - EX to 2nd only
+          ```
+          add $r3, $r4, $r5
+          add $r7, $r8, $r9
+          add $r6, $r3, $r2
+          ```
+        - MEM to 2nd only
+          ```
+          lw $a0, 8($sp)
+          add $r7, $r8, $r9
+          add $r3, $r4, $a0
+          ```
+        - EX to 1st and EX to 2nd
+          ```
+          add $r3, $r4, $r5
+          add $r6, $r7, $r3
+          add $r8, $r9, $r6
+          ```
+  b. For each RAW dependency above, how many nops would need to be inserted to allow your code from 6a to run correctly on a pipeline with no forwarding or hazard detection? show where the nops could be inserted.
+        - EX to 1st only
+          ```
+          add $r3, $r4, $r5
+          nop
+          nop
+          add $r6, $r2, $r3
+          add $r7, $r8, $r9
+          ``` 
+        - MEM to 1st only
+          ```
+            lw $a0, 8($sp)
+            nop
+            nop
+            add $r3, $r4, $a0
+            add $r7, $r8, $r9
+          ```
+        - EX to 2nd only
+          ```
+          add $r3, $r4, $r5
+          nop
+          add $r7, $r8, $r9
+          add $r6, $r3, $r2
+          ```
+        - MEM to 2nd only
+          ```
+          lw $a0, 8($sp)
+          nop
+          add $r7, $r8, $r9
+          add $r3, $r4, $a0
+          ```
+        - EX to 1st and EX to 2nd
+          ```
+          add $r3, $r4, $r5
+          nop
+          nop
+          add $r6, $r7, $r3
+          nop
+          nop
+          add $r8, $r9, $r6
+          ```
+  c. Analyzing each instruction independently will over-count the number of nops needed to run a program on a pipeline with no forwarding or hazard detection. Write a sequence of three assembly instructions so that, when you consider each instruction in the sequence independently, the sum of the stalls is larger than the number of stalls the sequence actually
+needs to avoid data hazards.
+```
+add $r3, $r4, $r5
+add $r6, $r7, $r3
+add $r8, $r9, $r3
+```
+If nops are added between the first and second instruction, the last instruction no longer needs any error handleing to work correctly.
+ d. Assuming no other hazards, what is the CPI for the program described by the table above when run on a pipeline with no forwarding? What percent of cycles are stalls? (For simplicity, assume that all necessary cases are listed above and can be treated independently.)
+ e. 
