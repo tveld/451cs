@@ -1,0 +1,11 @@
+
+(vmware-modconfig:27611): Gtk-WARNING **: Unable to locate theme engine in module_path: "adwaita",
+
+(vmware-modconfig:27611): Gtk-WARNING **: Unable to locate theme engine in module_path: "adwaita",
+/usr/share/themes/Adwaita/gtk-2.0/gtkrc:1163: error: unexpected identifier `direction', expected character `}'
+/usr/share/themes/Adwaita/gtk-2.0/gtkrc:1163: error: unexpected identifier `direction', expected character `}'
+/usr/share/themes/Adwaita/gtk-2.0/gtkrc:1163: error: unexpected identifier `direction', expected character `}'
+
+VMware Workstation Error:
+Failed to get exclusive lock on the configuration file. Another VMware process might be running using this configuration file.
+
