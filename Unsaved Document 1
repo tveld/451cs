@@ -1,0 +1,16 @@
+Title         : CS 451 Branch Prediction Homework
+Author        : Troy Veldhuizen
+
+[TITLE]
+
+** 1. You are asked to design a pipelined CPU that has no branch penalties at all: It has no branch delay slots, and does not rely on branch prediction. **
+
+**a. What must you do to implement such a cpu?**
+
+  We could add an ALU to the Decode stage of the cpu.  This ALU can calculate the branch delay, and by moving this calculation one stage forward we can eliminate the delay.
+
+**b. What are the major limitations of this design?**
+
+  By doing Decode and the ALU calculation in the same stage, it has the potential to be the longest stage.  This will effect the whole cpu, as the clock is set to the longest stage. Therefore it is not a good idea.
+  
+  
