@@ -1,0 +1,8 @@
+These are common commands for compiling certain test files instead of having to look them up all the time
+
+I just want to copy paste them into the terminal don't ask me anything else.
+
+to compile test cases use "javac -cp DLUnit.jar TestClass.java"
+to run type "java -jar DLUnit.jar JLSFile.jls CompTest.class"
+
+jlsCircuitTester circuitName.jls inputSetFile

@@ -1,0 +1,80 @@
+Please email this file to pop@mtu.edu
+along with a short description of what
+you were doing when the error occured.
+Thanks.
+JLS 4.1.5 <p>[built on July 13, 2016 at 10:38 AM]
+-- listing properties --
+java.runtime.name=Java(TM) SE Runtime Environment
+sun.boot.library.path=/usr/java/jdk1.8.0_102/jre/lib/amd64
+java.vm.version=25.102-b14
+java.vm.vendor=Oracle Corporation
+java.vendor.url=http://java.oracle.com/
+path.separator=:
+java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+file.encoding.pkg=sun.io
+user.country=US
+sun.java.launcher=SUN_STANDARD
+sun.os.patch.level=unknown
+java.vm.specification.name=Java Virtual Machine Specification
+user.dir=/home/bensonb/Desktop/451-Project2
+java.runtime.version=1.8.0_102-b14
+java.awt.graphicsenv=sun.awt.X11GraphicsEnvironment
+java.endorsed.dirs=/usr/java/jdk1.8.0_102/jre/lib/endorsed
+os.arch=amd64
+java.io.tmpdir=/tmp
+line.separator=
+
+java.vm.specification.vendor=Oracle Corporation
+os.name=Linux
+sun.jnu.encoding=UTF-8
+java.library.path=/usr/local/swipl-7.2.3/swipl-7.2.3/li...
+java.specification.name=Java Platform API Specification
+java.class.version=52.0
+sun.management.compiler=HotSpot 64-Bit Tiered Compilers
+os.version=3.10.0-327.28.2.el7.x86_64
+user.home=/home/bensonb
+user.timezone=
+java.awt.printerjob=sun.print.PSPrinterJob
+file.encoding=UTF-8
+java.specification.version=1.8
+user.name=bensonb
+java.class.path=JLS.jar
+java.vm.specification.version=1.8
+sun.arch.data.model=64
+java.home=/usr/java/jdk1.8.0_102/jre
+sun.java.command=JLS.jar
+java.specification.vendor=Oracle Corporation
+user.language=en
+awt.toolkit=sun.awt.X11.XToolkit
+java.vm.info=mixed mode
+java.version=1.8.0_102
+java.ext.dirs=/usr/java/jdk1.8.0_102/jre/lib/ext:/u...
+sun.boot.class.path=/usr/java/jdk1.8.0_102/jre/lib/resour...
+java.vendor=Oracle Corporation
+file.separator=/
+java.vendor.url.bug=http://bugreport.sun.com/bugreport/
+sun.cpu.endian=little
+sun.io.unicode.encoding=UnicodeLittle
+sun.font.fontmanager=sun.awt.X11FontManager
+sun.cpu.isalist=
+java.awt.AWTError: Can't connect to X11 window server using 'localhost:10.0' as the value of the DISPLAY variable.
+	at sun.awt.X11GraphicsEnvironment.initDisplay(Native Method)
+	at sun.awt.X11GraphicsEnvironment.access$200(X11GraphicsEnvironment.java:65)
+	at sun.awt.X11GraphicsEnvironment$1.run(X11GraphicsEnvironment.java:115)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.awt.X11GraphicsEnvironment.<clinit>(X11GraphicsEnvironment.java:74)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:264)
+	at java.awt.GraphicsEnvironment.createGE(GraphicsEnvironment.java:103)
+	at java.awt.GraphicsEnvironment.getLocalGraphicsEnvironment(GraphicsEnvironment.java:82)
+	at sun.awt.X11.XToolkit.<clinit>(XToolkit.java:126)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:264)
+	at java.awt.Toolkit$2.run(Toolkit.java:860)
+	at java.awt.Toolkit$2.run(Toolkit.java:855)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.awt.Toolkit.getDefaultToolkit(Toolkit.java:854)
+	at java.awt.Toolkit.getEventQueue(Toolkit.java:1734)
+	at java.awt.EventQueue.invokeLater(EventQueue.java:1266)
+	at edu.mtu.cs.jls.JLSStart.start(JLSStart.java:175)
+	at edu.mtu.cs.jls.JLS.main(JLS.java:125)

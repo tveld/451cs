@@ -1,0 +1,21 @@
+	.data
+val1:	0
+val2: 	50
+val3:	2
+
+
+	.text
+addi $16, $16, 3     # $16 = 3
+addi $17, $16, 5     # $17 = 8
+add  $18, $16, $17   # $18 = 16
+ori $19, $17, 20
+lw $22, val2
+lw $23, val3
+
+TOP: 	addi $22, $22, -1
+		addi $23, $23, 1
+		beq	$22, $0, END
+		j	TOP
+
+END: 
+	sw $t1, val1
